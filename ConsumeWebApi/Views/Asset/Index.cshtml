@@ -1,0 +1,37 @@
+﻿@using ConsumeWebApi.Models
+@using Microsoft.Ajax.Utilities
+@model IEnumerable<ConsumeWebApi.Models.AssetViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Assets</h2>
+<table class="table table-condensed">
+    <tr>
+        <th>Image</th>
+        <th>AssetId</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.FileURL)" onclick="ShowPopup();" />
+            </td>
+            <td>@Html.DisplayFor(modelItem => item.AssetId)</td>
+            <td>
+                <input type="button" title="View" value="@item.ButtonText" onclick="location.href='@Url.Action("View", "Asset", new { id = item.AssetId })'" />
+            </td>
+            
+           
+        </tr>
+    }
+</table>
+<script type="text/javascript">
+    ShowPopup = function () {
+        var param = $('#urlString').val();
+        window.open('/Asset/PopUpWindow?url='+param, "PopUpWindow", 'width=400px,height=400px,top=150,left=250');
+
+    }
+</script>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ConsumeWebApi.Models.Asset>
+
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FileURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ButtonText)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssetType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpiryDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ButtonText)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AssetId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AssetId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AssetId })
+        </td>
+    </tr>
+}
+
+</table>

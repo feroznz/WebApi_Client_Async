@@ -1,0 +1,5 @@
+﻿@using ConsumeWebApi.Models
+@model IEnumerable<ConsumeWebApi.Models.AssetViewModel>
+<div id="dialog">
+    <img src="@Model.FirstOrDefault().FileURL" />
+</div>

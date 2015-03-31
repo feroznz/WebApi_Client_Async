@@ -1,0 +1,81 @@
+﻿@model ConsumeWebApi.Models.AssetDetail
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<div>
+    <h4>AssetDetail</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FileURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssetId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssetId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OriginalFileURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OriginalFileURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssetType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssetType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpiryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ButtonText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ButtonText)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
